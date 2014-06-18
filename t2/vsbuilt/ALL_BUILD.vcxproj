@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{F48B610E-3E3C-4F10-8262-4B3191F8C6E1}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/Projects/CMakeTest/t2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/Projects/CMakeTest/t2 -BE:/Projects/CMakeTest/t2/vsbuilt --check-stamp-file E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Projects/CMakeTest/t2/CMakeLists.txt;E:\Projects\CMakeTest\t2\CMakeLists.txt;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeSystem.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCXXCompiler.cmake;E:\Projects\CMakeTest\t2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/Projects/CMakeTest/t2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files\CMake 2.8\bin\cmake.exe" -HE:/Projects/CMakeTest/t2 -BE:/Projects/CMakeTest/t2/vsbuilt --check-stamp-file E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Projects/CMakeTest/t2/CMakeLists.txt;E:\Projects\CMakeTest\t2\CMakeLists.txt;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeSystem.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-CXX.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeClDeps.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompiler.cmake.in;E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\2.8.10.1\CMakeCXXCompiler.cmake;E:\Projects\CMakeTest\t2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\e9e3db37fd2b8ba735a164d25bbfeda2\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Projects/CMakeTest/t2/vsbuilt/CMakeFiles/e9e3db37fd2b8ba735a164d25bbfeda2/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Projects/CMakeTest/t2/vsbuilt/CMakeFiles/e9e3db37fd2b8ba735a164d25bbfeda2/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Projects\CMakeTest\t2\vsbuilt\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/Projects/CMakeTest/t2/vsbuilt/ZERO_CHECK.vcxproj">
+      <Project>4C41BD2A-9B1D-4B96-99B8-F229CA6935C5</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/Projects/CMakeTest/t2/vsbuilt/src/hello.vcxproj">
+      <Project>88EAB728-E1C6-487F-93ED-CB0EC56C8205</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

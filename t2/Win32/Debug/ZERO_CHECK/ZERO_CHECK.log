@@ -1,0 +1,16 @@
+﻿Build started 2013/5/19 18:53:32.
+     1>Project "E:\Projects\CMakeTest\t2\ZERO_CHECK.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because E:/Projects/CMakeTest/t2/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because E:/Projects/CMakeTest/t2/src/CMakeFiles/generate.stamp is up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Win32\Debug\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild".
+         Touching "Win32\Debug\ZERO_CHECK\ZERO_CHECK.lastbuildstate".
+     1>Done Building Project "E:\Projects\CMakeTest\t2\ZERO_CHECK.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.13
